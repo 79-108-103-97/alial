@@ -1,0 +1,245 @@
+.production {
+    margin-bottom: 26.5rem;
+    .container {
+        position: relative;
+    }
+    &__swiper {
+        overflow: hidden;
+
+        &-right, &-left {
+            position: absolute;
+            top: 52%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
+
+            &-num {
+                font-size: 3.5rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                color: #E01327;
+
+                span {
+                    font-size: 1.8rem;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 150%;
+                    color: #979DA4;
+                }
+            }
+        }
+        &-right {
+            right: -14.5rem;
+        }
+        &-left {
+            left: -14.5rem;
+        }
+    }
+    &__slide {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-left {
+            width: 55.3rem;
+            
+            &--subtitle {
+                color: #92999D;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                letter-spacing: 0.288rem;
+                text-transform: uppercase;
+                margin-bottom: 6rem;
+            }
+            &--title {
+                font-size: 5.5rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 3.3rem;
+            }
+            &--text {
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 150%;
+                margin-bottom: 8rem;
+            }
+            &--link {
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                position: relative;
+                padding-right: 6.6rem;
+                width: fit-content;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    background: url(../img/icon/arrowrightred.svg) no-repeat;
+                    background-size: cover;
+                    width: 3.6rem;
+                    height: 1.2rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                }
+
+            }
+        }
+        &-right {
+            width: 72rem;
+            height: 53rem;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .swiper-button-prev, .swiper-button-next {
+        position: static;
+        width: 9rem;
+        height: 1.1rem;
+
+        svg {
+            width: 9rem;
+            height: 1.1rem;
+        }
+    }
+    .swiper-button-prev:after, .swiper-button-next:after {
+        content: unset;
+    }
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: -6rem;
+        top: auto;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: fit-content;
+        display: flex;
+        gap: 2rem;
+
+        .swiper-pagination-bullet {
+            transition: margin 0.5s ease-in;
+            background: #92999D;
+            width: 0.9rem;
+            height: 0.9rem;
+            margin-left: 0;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background: #E01327;
+            margin-right: 8rem;
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .production {
+        margin-bottom: 38.5rem;
+        &__swiper {
+            &-right, &-left {
+                position: absolute;
+                top: auto;
+                bottom: -15rem;
+                transform: translateY(0);
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+    
+                &-num {
+                    font-size: 4.4rem;
+    
+                    span {
+                        font-size: 3.2rem;
+                        line-height: 140%;
+                    }
+                }
+            }
+            &-right {
+                right: 4rem;
+                align-items: end;
+            }
+            &-left {
+                left: 4rem;
+                align-items: baseline;
+            }
+        }
+        &__slide {
+            display: flex;
+            flex-direction: column;
+            align-items: initial;
+            gap: 8rem;
+    
+            &-left {
+                width: auto;
+                
+                &--subtitle {
+                    font-size: 2.4rem;
+                    letter-spacing: 0.432rem;
+                    margin-bottom: 4rem;
+                }
+                &--title {
+                    font-size: 5.4rem;
+                    line-height: 130%;
+                    margin-bottom: 3rem;
+                }
+                &--text {
+                    font-size: 3.2rem;
+                    line-height: 140%;
+                    margin-bottom: 6rem;
+                }
+                &--link {
+                    font-size: 3.2rem;
+                    font-weight: 600;
+                    line-height: 140%;
+                    padding-right: 13.2rem;
+    
+                    &::after {
+                        width: 7.2rem;
+                        height: 2.4rem;
+                    }
+    
+                }
+            }
+            &-right {
+                width: 100%;
+                height: 55rem;
+            }
+        }
+        .swiper-button-prev, .swiper-button-next {
+            position: static;
+            width: 18rem;
+            height: 2.2rem;
+    
+            svg {
+                width: 18rem;
+                height: 2.2rem;
+            }
+        }
+        .swiper-button-prev:after, .swiper-button-next:after {
+            content: unset;
+        }
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+            bottom: -14.5rem;
+            gap: 3rem;
+    
+            .swiper-pagination-bullet {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+            .swiper-pagination-bullet-active {
+                margin-right: 5rem;
+            }
+        }
+    }
+}

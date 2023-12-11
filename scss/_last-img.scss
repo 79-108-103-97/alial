@@ -1,0 +1,14 @@
+.last-img {
+    margin-bottom: -20rem;
+    height: 96rem;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
+@media (max-width: 48em) {
+    .last-img {
+        height: auto;
+        width: 100%;
+    }
+}
