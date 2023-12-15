@@ -2758,7 +2758,7 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #0B0C0B;
+  color: #0b0c0b;
   margin-bottom: 6rem;
 }
 .competence__title {
@@ -2795,10 +2795,15 @@ svg {
   width: 42.7rem;
   height: 45.2rem;
   padding: 4rem;
-  color: #FFF;
+  color: #fff;
 }
 .competence-item-container {
   overflow: hidden;
+  position: relative;
+}
+.competence-item-container:hover .competence-item__back {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .competence-item--img {
   position: absolute;
@@ -2835,6 +2840,59 @@ svg {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+.competence-item__back {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3.2rem;
+  padding: 3.5rem;
+}
+.competence-item__back.--color1 {
+  background-color: #0b0c0b;
+}
+.competence-item__back.--color2 {
+  background-color: #e0355e;
+}
+.competence-item__back.--color3 {
+  background-color: #424245;
+}
+.competence-item__back-title {
+  color: #fff;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.competence-item__back-description {
+  color: #fff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.288rem;
+  text-align: center;
 }
 
 @media (max-width: 48em) {
@@ -2887,7 +2945,7 @@ svg {
     width: 35.4rem;
     height: 37.4rem;
     padding: 3rem;
-    color: #FFF;
+    color: #fff;
   }
   .competence-item--img {
     position: absolute;
